@@ -2,16 +2,27 @@
 public class EmpWageBuilder {
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
-	public static final int EMP_RATE_PER_HOUR = 20;
-	public static final int MAX_WORKING_DAYS = 2;
-	public static final int MAX_HRS_IN_MONTH = 10;
-
+	public int EMP_RATE_PER_HOUR , MAX_WORKING_DAYS , MAX_HRS_IN_MONTH ;
+	
 	public static void main(String[] args) {
-		//Creating a object of class EmpWageBuilder
-		EmpWageBuilder empWage=new EmpWageBuilder();
-		empWage.EmpWageCalculationMethod();
+		System.out.println("BridgeLabz Employee Details::");
+		EmpWageBuilder bridgelabzEmpWage = new EmpWageBuilder(20, 2, 10);
+		bridgelabzEmpWage.EmpWageCalculationMethod();
+		System.out.println();
+		System.out.println("Infosys Employee Details::");
+		EmpWageBuilder infosysEmpWage = new EmpWageBuilder(30, 2, 8);
+		infosysEmpWage.EmpWageCalculationMethod();
 	}
-
+	public EmpWageBuilder() {
+		EMP_RATE_PER_HOUR = 0;
+		MAX_WORKING_DAYS = 0;
+		MAX_HRS_IN_MONTH = 0;
+	}
+	public EmpWageBuilder(int empRate , int workingDays , int hrsInMonth) {
+		EMP_RATE_PER_HOUR = empRate;
+		MAX_WORKING_DAYS = workingDays;
+		MAX_HRS_IN_MONTH = hrsInMonth;
+	}
 	private void EmpWageCalculationMethod() {
 		// Variables
 		int empHrs = 0 , totalEmpHrs = 0, totalWorkingDays = 0;
