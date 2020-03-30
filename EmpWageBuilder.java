@@ -1,17 +1,22 @@
-// Welcome to Employee Wage problem
+// Welcome to Employee Wage prblem
 public class EmpWageBuilder {
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
 	public static final int EMP_RATE_PER_HOUR = 20;
-	public static final int NUM_OF_WORKING_DAYS = 2;
+	public static final int MAX_WORKING_DAYS = 2;
 	public static final int MAX_HRS_IN_MONTH = 10;
 
 	public static void main(String[] args) {
+		//Creating a object of class EmpWageBuilder
+		EmpWageBuilder empWage=new EmpWageBuilder();
+		empWage.EmpWageCalculationMethod();
+	}
+
+	private void EmpWageCalculationMethod() {
 		// Variables
 		int empHrs = 0 , totalEmpHrs = 0, totalWorkingDays = 0;
 		// Computation
-		while (totalEmpHrs <= MAX_HRS_IN_MONTH &&
-				totalWorkingDays < NUM_OF_WORKING_DAYS) {
+		while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < MAX_WORKING_DAYS) {
 			totalWorkingDays ++;
 			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 			switch (empCheck) {
@@ -31,3 +36,4 @@ public class EmpWageBuilder {
 		System.out.println("Total Employee Wage: " + totalEmpWage);
 	}
 }
+
