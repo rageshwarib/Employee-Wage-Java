@@ -1,5 +1,5 @@
 //Welcome to Employee Wage Problem
-public class EmpWageBuilder {
+public class EmpWageBuilder implements EmpWageInterface {
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
 	public static final int IS_OVER_TIME = 3;
@@ -91,8 +91,7 @@ public class EmpWageBuilder {
 	}
 
 	public static void main(String[] args) {
-		//Creating a object of EmpWageBuilder Class
-		EmpWageBuilder empWage = new EmpWageBuilder();
+		EmpWageInterface empWage = new EmpWageBuilder();
 		empWage.EmpWageComputationForBridgelabz();
 		empWage.EmpWageComputationForInfosys();
 		empWage.EmpWageComputationForCapgemini();
