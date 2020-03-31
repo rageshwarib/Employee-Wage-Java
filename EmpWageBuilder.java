@@ -28,6 +28,8 @@ public class EmpWageBuilder {
 				default:
 					empHrs = 0;
 			}
+			int empWage = empHrs * EMP_RATE_PER_HOUR;
+			System.out.println("Day#:" + totalWorkingDays + "Employee Daily Wage: " + empWage);
 			totalEmpHrs += empHrs;
 			System.out.println("Day#: " + totalWorkingDays + " Employee hour: " + empHrs);
 		}
