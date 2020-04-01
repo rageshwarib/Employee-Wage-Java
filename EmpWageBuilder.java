@@ -17,7 +17,7 @@ public class EmpWageBuilder {
 		// Computation
 		while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < MAX_WORKING_DAYS) {
 			totalWorkingDays ++;
-			int empCheck = (int) Math.floor(Math.random() * 10) % 2;
+			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 			switch (empCheck) {
 				case IS_PART_TIME:
 					empHrs = 5;
